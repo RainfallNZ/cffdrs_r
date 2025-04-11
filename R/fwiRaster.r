@@ -154,8 +154,7 @@ fwiRaster <- function(
     mon = 7,
     out = "all",
     lat.adjust = TRUE,
-    uppercase = TRUE,
-    ...) {
+    uppercase = TRUE) {
   # due to NSE notes in R CMD check
   short = full = NULL
   # Reference latitude for DMC day length adjustment
@@ -286,7 +285,7 @@ fwiRaster <- function(
   isi <- lapp(
     x = c(ffmc, input[["ws"]]),
     fun = Vectorize(initial_spread_index),
-    fbpMod = FALSE
+    fbpMod = TRUE
   )
 
   ###########################################################################
